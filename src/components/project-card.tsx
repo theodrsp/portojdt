@@ -1,5 +1,3 @@
-import React from 'react'
-
 // Properti
 interface Props {
     name: string;

@@ -1,6 +1,5 @@
 import Avatar from "../../assets/images/fotoexample.jpeg";
 import ProjectCard from "../../components/project-card";
-import React from "react";
 
 interface Project {
   name: string;
@@ -59,9 +58,7 @@ const LandingPage = () => {
   ];
   return (
     <div className="flex flex-col">
-
       <section className="flex flex-row justify-evenly items-center">
-
         <div className="flex flex-col">
           <h1 className="text-4xl font-semibold">Hello, This is My World</h1>
           <p className="text-3xl text-bold">Timotius Theodearson</p>
@@ -69,14 +66,15 @@ const LandingPage = () => {
         <img src={Avatar} className="w-60 rounded-sm my-9" alt="" />
       </section>
 
-      <section className='flex flex-col p-5 px-5 py-10 bg-gray-50 gap-5'>
-          <label className="font-semibold text-xl">Summary</label>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolores voluptatum non perspiciatis facilis harum veniam nobis ipsa. Voluptates voluptas ratione nisi reiciendis laudantium dolorum. Suscipit consequatur velit accusantium temporibus!</p>
-        </section>
-        
-      <section className="flex flex-col p-5 px-5 py-10 bg-gray-600 gap-5">
+      <section className="flex flex-col p-5 px-5 py-10 bg-gray-50 gap-5">
+        <label className="font-semibold text-xl">Summary</label>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolores voluptatum non perspiciatis facilis harum veniam nobis ipsa. Voluptates voluptas ratione nisi reiciendis laudantium dolorum. Suscipit consequatur velit
+          accusantium temporibus!
+        </p>
+      </section>
 
-        
+      <section className="flex flex-col p-5 px-5 py-10 bg-gray-600 gap-5">
         <label className="font-semibold text-xl">Project</label>
         {project.map((item: Project, index: number) => (
           <ProjectCard key={index} name={item.name} year={item.year} description={item.description} bgColor={`${index % 2 === 0 ? "bg-gray-100" : "bg-gray-100"}`} />
